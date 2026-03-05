@@ -1,0 +1,72 @@
+name: signal-search-tool-tester
+description: PMC信号搜索工具测试 - 用于验证signals_data.js数据质量和界面显示正确性，支持工具版本更新后的自测准出
+entrypoint: test_signals.js
+
+# 测试脚本执行方式
+execution:
+  command: bun run test_signals.js
+  working_directory: D:/AI/临时文件/2-Signal_search_tool_v4/Signal_search_tool_v4/
+  description: 运行信号搜索工具测试套件
+
+# 测试覆盖范围
+test_coverage:
+  - name: 数据完整性测试
+    tests:
+      - 数据加载
+      - 必需字段完整性
+      - 信号名称非空
+      - 数据类型有效性
+      - 接口名称有效性
+
+  - name: 枚举值测试
+    tests:
+      - 枚举类型信号有枚举值
+      - 枚举值名称非空
+      - 枚举值有效
+
+  - name: 搜索功能测试
+    tests:
+      - 单关键词搜索
+      - 多关键词AND搜索
+      - 枚举值搜索
+      - 无结果搜索
+      - 空搜索
+      - 大小写不敏感
+      - 接口名搜索
+
+  - name: 数据质量测试
+    tests:
+      - 重复信号名检测
+      - 默认值合理性
+      - 枚举值信号存在
+      - 关键信号存在
+      - 接口信号数量
+
+  - name: 界面显示正确性测试
+    tests:
+      - 基本字段显示
+      - 枚举值信号显示
+      - 空结果处理
+      - 大量枚举值展开/收起
+      - 批量结果显示
+      - 特殊字符处理
+      - 内部/接口信号分类
+      - 默认值字段显示
+
+# 测试数据要求
+data_requirements:
+  - signals_data.js 必须存在于测试脚本同目录
+  - 数据格式: JSON数组，每个元素包含 signalName, interfaceName, dataType, signalType, defaultValue, min, max, extSignalType, enumElements 字段
+
+# 预期测试结果
+expected_result:
+  - 通过: 30个测试
+  - 失败: 0个测试
+  - 退出码: 0表示全部通过，非0表示有失败
+
+# 使用场景
+use_cases:
+  - 替换signals_data.js后验证数据正确性
+  - 工具版本更新后回归测试
+  - 数据源Excel更新后重新生成数据的验证
+  - CI/CD自动化测试集成
