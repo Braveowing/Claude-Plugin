@@ -1,4 +1,0 @@
-# 忽略大文件测试输出
-*.output
-node_modules/
-.DS_Store
