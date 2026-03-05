@@ -17,9 +17,6 @@
 ## 使用方法
 
 ```bash
-# 安装依赖
-npm install
-
 # 运行测试
 bun run test_signals.js
 ```
