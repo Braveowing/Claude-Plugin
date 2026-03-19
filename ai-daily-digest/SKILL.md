@@ -74,6 +74,12 @@ metadata:
 生成今日 AI 日报
 ```
 
+## 定时任务
+
+- OpenClaw Cron 定时推送，每天 **08:00** (Asia/Hong_Kong) 自动生成并推送到飞书
+- Cron 表达式: `0 8 * * *`
+- 搜索优先使用 Tavily
+
 ## 配置
 
 | 配置项 | 说明 |
