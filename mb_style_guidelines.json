@@ -1,0 +1,111 @@
+{
+  "fonts": {
+    "primary": "Mercedes Sans",
+    "fallback": [
+      "Arial",
+      "Calibri",
+      "Helvetica"
+    ],
+    "title_sizes": {
+      "slide_title": [
+        28,
+        32
+      ],
+      "section_header": [
+        18,
+        22
+      ],
+      "subsection": [
+        14,
+        16
+      ]
+    },
+    "body_sizes": {
+      "normal": [
+        11,
+        13
+      ],
+      "small": [
+        9,
+        10
+      ],
+      "notes": [
+        8,
+        9
+      ]
+    }
+  },
+  "colors": {
+    "primary": {
+      "mb_black": [
+        0,
+        0,
+        0
+      ],
+      "mb_white": [
+        255,
+        255,
+        255
+      ],
+      "mb_silver": [
+        192,
+        192,
+        192
+      ],
+      "mb_blue": [
+        0,
+        100,
+        180
+      ]
+    },
+    "semantic": {
+      "success": [
+        0,
+        120,
+        0
+      ],
+      "warning": [
+        200,
+        150,
+        50
+      ],
+      "error": [
+        180,
+        0,
+        0
+      ],
+      "info": [
+        0,
+        100,
+        180
+      ]
+    },
+    "guidelines": {
+      "max_highlight_colors": 3,
+      "prefer_neutral": true,
+      "highlight_only_for_emphasis": true
+    }
+  },
+  "layout": {
+    "margins": {
+      "left": 0.5,
+      "right": 0.5,
+      "top": 0.4,
+      "bottom": 0.4
+    },
+    "spacing": {
+      "min_between_elements": 0.15,
+      "preferred_between_sections": 0.3
+    },
+    "alignment": {
+      "tolerance_inches": 0.05
+    }
+  },
+  "style_principles": {
+    "clean_and_minimal": true,
+    "business_formal": true,
+    "structured_information": true,
+    "avoid_excessive_colors": true,
+    "use_visuals_strategically": true
+  }
+}
